@@ -1,0 +1,18 @@
+<div class="resouces_wrap flex items-center">
+    <ngx-slider class="custom-resource-slider" [(value)]="value" [options]="options" (valueChange)="onSliderChange($event)"></ngx-slider>
+    <div class="input-group">
+      <input
+        [step]="options.step"
+        [min]="options.floor"
+        [max]="options.ceil"
+        class="input__ele"
+        type="number" 
+        [value]="value" 
+        (input)="onChanged($event)" 
+        (blur)="touched()"
+        [disabled]="isDisabled"
+        [placeholder]="placeholder"
+      />
+      <span class="input__value-type">{{resourceType || 'GB'}}</span>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.input {
+  &-group {
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  &__ele {
+    border: 0;
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+  &__value-type {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
