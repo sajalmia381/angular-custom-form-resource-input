@@ -1,7 +1,6 @@
 import { Options } from '@angular-slider/ngx-slider';
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { MatSliderChange } from '@angular/material/slider';
 
 @Component({
   selector: 'app-resource-control',
@@ -15,6 +14,7 @@ import { MatSliderChange } from '@angular/material/slider';
     }
   ]
 })
+
 export class ResourceControlComponent implements ControlValueAccessor, OnInit {
   @Input() placeholder?: string;
   @Input() resourceType?: string;
@@ -63,7 +63,7 @@ export class ResourceControlComponent implements ControlValueAccessor, OnInit {
     this.touched = fn;
   }
   
-  public setDisableState(isDisabled: boolean): void {
+  public setDisabledState(isDisabled: boolean): void {
     this.isDisabled = isDisabled
   }
   
